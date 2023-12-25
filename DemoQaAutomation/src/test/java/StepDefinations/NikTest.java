@@ -17,11 +17,13 @@ public class NikTest {
 		driver = testSetup.testBase.webDriver();
 	}
 	
-	public void webDriver() {
+	public void webDriver() throws Throwable {
 		driver.get("https://demoqa.com/");
 		driver.manage().window().maximize();
 		testSetup.genericUtils.scrollWindow();
 		//testSetup.pageObjectsManager.homePage().open_ElementTile();
-		homePage.open_ElementTile();
+		homePage.open_FormsTile();
+		testSetup.pageObjectsManager.formPage().submit_the_form();
 	}
 }
+ 

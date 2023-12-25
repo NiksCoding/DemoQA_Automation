@@ -18,7 +18,7 @@ public class Home_Page {
 	By ElementTile = By.xpath("//div//h5[text()='Elements']");
 	By FormsTile = By.xpath("//div//h5[text()='Forms']");
 	By Alert_Frame_WindowsTile = By.xpath("//div//h5[text()='Alerts, Frame & Windows']");
-	By WidgetsTile =  By.xpath("//div//h5[text()='Alerts, Frame & Windows']");
+	By WidgetsTile =  By.xpath("//div//h5[text()='Widgets']");
 	By InteractionsTile =  By.xpath("//div//h5[text()='Interactions']");
 	By BookStoreApplicationsTile =  By.xpath("//div//h5[text()='Book Store Application']");
 	

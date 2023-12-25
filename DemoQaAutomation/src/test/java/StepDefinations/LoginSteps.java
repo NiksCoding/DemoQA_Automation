@@ -44,7 +44,7 @@ public class LoginSteps {
 	}
 	//To open Element Items
 	@And("user open the {string} page")
-	public void user_open_the_element_items(String string) {
+	public void user_open_the_element_items(String string) throws Throwable {
 		pageObjectsManager.elementPage().open_Element_Items(string);
 	}
 //Glue code for Element Items page
@@ -87,4 +87,96 @@ public class LoginSteps {
 	   pageObjectsManager.elementPage().impressiveRadioButton();
   }
 
+   //web tables
+   @Then("user open a new form from add button")
+   public void user_open_a_new_form_from_add_button() {
+	   pageObjectsManager.elementPage().click_add_button();
+   }
+   @And("submit after filling the details")
+   public void submit_after_filling_the_details() {
+	   pageObjectsManager.elementPage().submit_the_details_in_the_webTable();
+   }
+   //Buttons
+   @Then("user perform the mouse {string}")
+   public void user_perform_the_mouse_action(String string) throws InterruptedException {
+	   
+	   pageObjectsManager.elementPage().mouse_action(string);
+   }
+   //Links
+   @Then("user select the {string}")
+   public void user_select_the_links(String string) {
+	   pageObjectsManager.elementPage().links(string);
+   }
+   //Upload and Download Image
+   @Then("validate user able to download the image")
+   public void validate_user_able_to_download_the_image() {
+	   System.out.println("Image downloaded");
+	   //pageObjectsManager.elementPage().downloadImage();
+	    
+   }
+   @And("user is able to upload an image")
+   public void user_able_to_upload_an_image()  {
+	   pageObjectsManager.elementPage().uploadImage();
+   }
+   
+   //**Submit the Form**
+   
+   @And("user submit the form with details")
+   public void submit_the_form() throws Throwable {
+	   pageObjectsManager.formPage().submit_the_form();
+   }
+   
+   //Open AlertsFrameAndWindowsItems
+   @And("user open the page {string}")
+	public void Alerts_Frame_And_Windows_Items(String string) throws Throwable {
+		pageObjectsManager.alertsFrameAndWindows_Page().open_AlertsFrameAndWindowsItems(string);
+	}
+   
+   //Browse windows
+   
+   @And("user open the Browser Windows item {string}")
+	public void browser_windows_Items(String string) throws Throwable {
+		pageObjectsManager.alertsFrameAndWindows_Page().open_browserWindows_item(string);
+	}
+   
+   @Then("validate {string}")
+   public void validate_actions(String string) throws Throwable {
+	   pageObjectsManager.alertsFrameAndWindows_Page().validate_BrowserItems(string);
+   }
+   
+   //Alerts
+   @Then("user open the Alerts item {string}")
+   public void user_open_the_Alerts_item(String string) throws Throwable {
+	   pageObjectsManager.alertsFrameAndWindows_Page().open_Alert_items(string);
+   }
+   @And("validate Alert {string}")
+   public void validate_Alerts_Action(String string) throws Throwable {
+	   pageObjectsManager.alertsFrameAndWindows_Page().validate_alerts_action(string);
+	   driver.close();
+   }
+   
+   //Modal
+   @Then("user click on the modal button {string}")
+   public void user_click_on_yhe_modal_button(String string) {
+	   pageObjectsManager.alertsFrameAndWindows_Page().open_modal_dialog(string);
+   }
+   @And("print modal Text {string}")
+   public void print_modal_Text(String string) throws Throwable {
+	   pageObjectsManager.alertsFrameAndWindows_Page().get_model_text(string);
+	   driver.close();
+   }
+   
+   //Widgets Items
+   @And("user open the widgets item page {string}")
+   public void open_widgets_items(String string) {
+	   pageObjectsManager.widgetsPage().open_widgets_items(string);
+	   driver.close();
+   }
+   
+   
+   
+   
+   
+   
+   
 }
